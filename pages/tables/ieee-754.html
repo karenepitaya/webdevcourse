@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./minimal-table.css" />
+    <title>IEEE-754</title>
+</head>
+<body>
+    <!-- content -->
+    <h1>IEEE-754</h1>
+    <table>
+        <caption><a href="https://en.wikipedia.org/wiki/IEEE_754">IEEE-754</a>是浮点数的标准表示法</caption>
+        <colgroup>
+        </colgroup>
+        <thead>
+            <tr>
+                <th colspan="2">类型</th>
+                <th>1位符号位s（sign）</th>
+                <th>偏置量Bias</th>
+                <th>k位阶码字段exp</th>
+                <th>阶码E（exponent）</th>
+                <th>n位小数字段frac</th>
+                <th>尾数M（mantissa）</th>
+                <th>浮点值V&nbsp;=&nbsp;(-1)<sup>s</sup>&nbsp;×&nbsp;2<sup>E</sup>&nbsp;×&nbsp;M</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th colspan="2">非规格化值</th>
+                <td>1(-)/0(+)</td>
+                <td>Bias&nbsp;=&nbsp;2<sup>k</sup>&nbsp;-&nbsp;1</td>
+                <td>k&nbsp;=&nbsp;8，全为&nbsp;0</td>
+                <td>E&nbsp;=&nbsp;1&nbsp;-&nbsp;Bias</td>
+                <td>n&nbsp;=&nbsp;23</td>
+                <td>M&nbsp;=&nbsp;frac</td>
+                <td>V = (-1)<sup>s</sup>&nbsp;×&nbsp;2<sup>E</sup>&nbsp;×&nbsp;M</td>
+            </tr>
+            <tr>
+                <th colspan="2">规格化值</th>
+                <td>1(-)/0(+)</td>
+                <td>Bias&nbsp;=&nbsp;2<sup>k</sup>&nbsp;-&nbsp;1</td>
+                <td>k&nbsp;=&nbsp;8，既不全为&nbsp;0也不全为&nbsp;1</td>
+                <td>E&nbsp;=&nbsp;exp&nbsp;-&nbsp;Bias</td>
+                <td>n&nbsp;=&nbsp;23</td>
+                <td>M&nbsp;=&nbsp;1&nbsp;+&nbsp;frac</td>
+                <td>V = (-1)<sup>s</sup>&nbsp;×&nbsp;2<sup>E</sup>&nbsp;×&nbsp;M</td>
+            </tr>
+            <tr>
+                <th rowspan="2">特殊值</th>
+                <th>无穷大</th>
+                <td>1(-∞)/0(+∞)</td>
+                <td></td>
+                <td rowspan="2">k&nbsp;=&nbsp;8，全为&nbsp;1</td>
+                <td></td>
+                <td>n&nbsp;=&nbsp;23，全为&nbsp;0</td>
+                <td></td>
+                <td>V&nbsp;=&nbsp;∞</td>
+            </tr>
+            <tr>
+                <th>NaN</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>n&nbsp;=&nbsp;23，不全为&nbsp;0</td>
+                <td></td>
+                <td>V&nbsp;=&nbsp;NaN</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="9">以单精度浮点数为例</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
