@@ -1,0 +1,132 @@
+/* ========== 基础字体和背景设置 ========== */
+html {
+  font-size: 16px; /* 1rem = 16px */
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9f9; /* 柔和浅灰色背景 */
+  margin: 0;
+  padding: 0 1.5rem; /* 页面左右留白 */
+  line-height: 1.6;
+}
+
+/* ========== 标题分级 ========== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  color: #222; /* 稍微深一点，标题突出 */
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+/* ========== 段落样式 ========== */
+p {
+  font-size: 1rem;
+  color: #555; /* 比标题颜色浅一点，正文阅读更舒服 */
+  margin-top: 0;
+  margin-bottom: 1em;
+  line-height: 1.8;
+}
+
+/* ========== 水平线（hr）美化 ========== */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 2em 0;
+}
+
+/* ========== 图片适配 ========== */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* 图片轻微圆角，看起来柔和 */
+}
+
+/* ========== 响应式设计 ========== */
+
+/* 平板 (小于 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 0 1rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  h6 {
+    font-size: 0.875rem;
+  }
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+/* 手机 (小于 480px) */
+@media (max-width: 480px) {
+  body {
+    padding: 0 0.8rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.125rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  h6 {
+    font-size: 0.875rem;
+  }
+  p {
+    font-size: 0.875rem;
+  }
+}

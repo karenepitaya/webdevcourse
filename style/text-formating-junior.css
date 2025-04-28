@@ -1,0 +1,109 @@
+/* ========== 基础字体设置 ========== */
+html {
+  font-size: 16px; /* 1rem = 16px，方便计算 */
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+/* ========== 标题分级设置 ========== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 3rem; /* 48px */
+}
+
+h2 {
+  font-size: 2.25rem; /* 36px */
+}
+
+h3 {
+  font-size: 1.75rem; /* 28px */
+}
+
+h4 {
+  font-size: 1.5rem; /* 24px */
+}
+
+h5 {
+  font-size: 1.25rem; /* 20px */
+}
+
+h6 {
+  font-size: 1rem; /* 16px */
+}
+
+/* ========== 段落设置 ========== */
+p {
+  font-size: 1rem; /* 16px */
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+/* ========== 响应式设计（针对小屏设备优化） ========== */
+
+/* 平板 (小于 768px) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem; /* 40px */
+  }
+  h2 {
+    font-size: 2rem; /* 32px */
+  }
+  h3 {
+    font-size: 1.5rem; /* 24px */
+  }
+  h4 {
+    font-size: 1.25rem; /* 20px */
+  }
+  h5 {
+    font-size: 1rem; /* 16px */
+  }
+  h6 {
+    font-size: 0.875rem; /* 14px */
+  }
+  p {
+    font-size: 0.95rem; /* 15.2px */
+  }
+}
+
+/* 手机 (小于 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem; /* 32px */
+  }
+  h2 {
+    font-size: 1.75rem; /* 28px */
+  }
+  h3 {
+    font-size: 1.5rem; /* 24px */
+  }
+  h4 {
+    font-size: 1.125rem; /* 18px */
+  }
+  h5 {
+    font-size: 1rem; /* 16px */
+  }
+  h6 {
+    font-size: 0.875rem; /* 14px */
+  }
+  p {
+    font-size: 0.875rem; /* 14px */
+  }
+}
