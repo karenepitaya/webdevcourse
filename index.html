@@ -191,21 +191,103 @@
           63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms
         </samp>
         </pre>
-        <p>此处创建了一个 mailto 链接：<a href="mailto:3055397506@qq.com">向我发邮件</a></p>
+        <p>
+          此处创建了一个 mailto 链接：<a href="mailto:3055397506@qq.com"
+            >向我发邮件</a
+          >
+        </p>
       </div>
     </section>
     <hr />
+    <main>
+      <h3>
+        <mark style="background-color: lightblue">Part II: Form Test</mark
+        >&para;
+      </h3>
+      <form action="./payment_page" method="get">
+        <h2>Register for the meetup</h2>
+        <fieldset>
+          <legend>Choose hotel room type (required):</legend>
+          <div>
+            <input
+              type="radio"
+              id="hotelChoice1"
+              name="hotel"
+              value="economy"
+              checked
+            />
+            <label for="hotelChoice1">Economy (+$0)</label>
+
+            <input
+              type="radio"
+              id="hotelChoice2"
+              name="hotel"
+              value="superior"
+            />
+            <label for="hotelChoice2">Superior (+$50)</label>
+
+            <input
+              type="radio"
+              id="hotelChoice3"
+              name="hotel"
+              value="penthouse"
+              disabled
+            />
+            <label for="hotelChoice3">Penthouse (+$150)</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Choose classes to attend:</legend>
+          <div>
+            <input type="checkbox" id="yoga" name="yoga" />
+            <label for="yoga">Yoga (+$10)</label>
+
+            <input type="checkbox" id="coffee" name="coffee" />
+            <label for="coffee">Coffee roasting (+$20)</label>
+
+            <input type="checkbox" id="balloon" name="balloon" />
+            <label for="balloon">Balloon animal art (+$5)</label>
+          </div>
+        </fieldset>
+        <p>
+          <label for="transport">How are you getting here:</label>
+          <select name="transport" id="transport">
+            <option value="">--Please choose an option--</option>
+            <option value="plane">Plane</option>
+            <option value="bike">Bike</option>
+            <option value="walk">Walk</option>
+            <option value="bus">Bus</option>
+            <option value="train">Train</option>
+            <option value="jetPack">Jet pack</option>
+          </select>
+        </p>
+        <p>
+          <label for="comments">Any other comments:</label>
+          <textarea id="comments" name="comments" rows="5" cols="33"></textarea>
+        </p>
+        <p>
+          <button type="submit">Continue to payment</button>
+        </p>
+      </form>
+    </main>
+    <hr />
     <aside class="aside">
       <h3>
-        <mark style="background-color: lightblue">Part II: Related Links</mark
+        <mark style="background-color: lightblue">Part III: Related Links</mark
         >&para;
       </h3>
       <ul>
         <li><a href="./pages/letter-text/letter-text.html">Letter Text</a></li>
-        <li><a href="./pages/mdn-splash-page-start/index.html">MDN Start page</a></li>
-        <li><a href="./pages/navigation-menu-start/index.html">Navigation Menu</a></li>
+        <li>
+          <a href="./pages/mdn-splash-page-start/index.html">MDN Start page</a>
+        </li>
+        <li>
+          <a href="./pages/navigation-menu-start/index.html">Navigation Menu</a>
+        </li>
         <li><a href="./pages/site-structure/index.html">Site Structure</a></li>
-        <li><a href="./pages/tables/planets-data.html">Planets Data Table</a></li>
+        <li>
+          <a href="./pages/tables/planets-data.html">Planets Data Table</a>
+        </li>
       </ul>
     </aside>
     <hr />
