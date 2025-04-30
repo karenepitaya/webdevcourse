@@ -49,36 +49,149 @@
         <h5>This is H5 title</h5>
         <h6>This is H6 title</h6>
         <p>this is a normal text</p>
-        <p>this is a <strong>Strong Importance</strong> text</p>
+        <p>
+          this is a <del>Deleted text</del> text <code><b>&lt;del&gt;</b></code>
+        </p>
+        <p>
+          this is a <ins>Inserted text</ins> text
+          <code><b>&lt;ins&gt;</b></code>
+        </p>
+        <p>
+          this is a <s>Strikethrough text</s> text <code><b>&lt;s&gt;</b></code>
+        </p>
+        <p>
+          this is a <strong>Strong Importance</strong> text
+          <code><b>&lt;strong&gt;</b></code>
+        </p>
         <p>
           this is a
           <b
             >Strong Importance-Like, but for keywords, product names, lead
             sentence…</b
           >
-          text
+          text <code><b>&lt;b&gt;</b></code>
         </p>
-        <p>this is a <em>Emphasis</em> text</p>
+        <p>
+          this is a <em>Emphasis</em> text <code><b>&lt;em&gt;</b></code>
+        </p>
         <p>
           this is a
           <i
             >Emphasis-Like, but for foreign words, taxonomic designation,
             technical terms, a thought…</i
           >
-          text
+          text <code><b>&lt;i&gt;</b></code>
         </p>
-        <p>this is a <u>Underline, for proper name, misspelling…</u> text</p>
-        <p>this is a <big>Non-semantic element: &lt;big&gt; </big> text</p>
-        <p>this is a <small>Non-semantic element: &lt;small&gt;</small> text</p>
+        <p>
+          this is a <u>Underline, for proper name, misspelling…</u> text
+          <code><b>&lt;u&gt;</b></code>
+        </p>
+        <p>
+          this is a <big>Non-semantic element: &lt;big&gt; </big> text
+          <code><b>&lt;big&gt;</b></code>
+        </p>
+        <p>
+          this is a <small>Non-semantic element: &lt;small&gt;</small> text
+          <code><b>&lt;small&gt;</b></code>
+        </p>
         <p>
           this is a Subscript text, such as: H<sub>2</sub>O, V<sub>2</sub>O<sub
             >5</sub
           >
+          <code><b>&lt;sub&gt;</b></code>
         </p>
-        <p>this is a Supscript text, such as: Apple<sup>TM</sup></p>
+        <p>
+          this is a Supscript text, such as: Apple<sup>TM</sup>
+          <code><b>&lt;sup&gt;</b></code>
+        </p>
         <p>
           this is a <mark style="background-color: lightgreen">Mark</mark> text
+          <code><b>&lt;mark&gt;</b></code>
         </p>
+        <p>
+          According to the
+          <a href="/en-US/docs/Web/HTML/Reference/Elements/blockquote">
+            <cite>MDN blockquote page</cite></a
+          >:
+        </p>
+        <p>
+          The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+          <em>HTML Block Quotation Element</em>) indicates that the enclosed
+          text is an extended quotation.
+        </p>
+        <p>Here is a blockquote:</p>
+        <blockquote
+          cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/blockquote"
+        >
+          <p>
+            The
+            <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+            <em>HTML Block Quotation Element</em>) indicates that the enclosed
+            text is an extended quotation.
+          </p>
+        </blockquote>
+        <p>
+          Here is a inline quotation: — <code>&lt;q&gt;</code> — is
+          <q
+            cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/q"
+          >
+            intended for short quotations that don't require paragraph breaks.
+          </q>
+        </p>
+        <p>
+          这里是一段专有名词的缩写，比如<abbr title="Hypertext Markup Language"
+            >HTML</abbr
+          >、<abbr title="Object-Oriented Programming">OOP</abbr> and so on.
+        </p>
+        <address>
+          <small>(address标签内的内容默认为斜体，从这里开始)</small>
+          <p>
+            Chris Mills<br />
+            Manchester<br />
+            The Grim North<br />
+            UK
+          </p>
+
+          <ul>
+            <li>Tel: 01234 567 890</li>
+            <li>Email: me@grim-north.co.uk</li>
+          </ul>
+          <small>(address标签内的内容默认为斜体，在这里结束)</small>
+        </address>
+
+        <p>
+          下方内容与代码块有关：&lt;code&gt;（代码块） &lt;var&gt;（表示变量）
+          &lt;kbd&gt;（表示键盘） &lt;samp&gt;（表示输出）
+        </p>
+        <pre><code>
+          const para = document.querySelector('p');
+          para.onclick = function() {
+            alert('Owww, stop poking me!');
+          }
+        </code></pre>
+
+        <p>
+          You shouldn't use presentational elements like
+          <code>&lt;font&gt;</code> and <code>&lt;center&gt;</code>.
+        </p>
+
+        <p>
+          In the above JavaScript example, <var>para</var> represents a
+          paragraph element.
+        </p>
+
+        <p>
+          Select all the text with <kbd>Ctrl</kbd> or <kbd>Cmd</kbd> +
+          <kbd>A</kbd>.
+        </p>
+
+        <pre><samp>
+          $ <kbd>ping mozilla.org</kbd>
+          PING mozilla.org (63.245.215.20): 56 data bytes 64 bytes from
+          63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms
+        </samp>
+        </pre>
+        <p>此处创建了一个 mailto 链接：<a href="mailto:3055397506@qq.com">向我发邮件</a></p>
       </div>
     </section>
   </body>
