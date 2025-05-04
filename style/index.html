@@ -1,35 +1,101 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="CSS 进阶" />
     <meta name="author" content="Karene Pitaya" />
-    <link rel="icon" href="./../src/favicon96-css-pages.png" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="./../src/favicon96-css-pages.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="text-formating-intermediate.css" />
     <title>CSS Exercises Page</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>CSS Exercises: Getting Start</h1>
-        <nav>
-            <ul>
-                <li><a href="./../index.html">主页</a></li>
-                <li><a href="#">Getting Start（初步认识 CSS ）</a></li>
-                <li><a href="./pages/selector/selector.html">Selector（ CSS 解释器）</a></li>
-                <li><a href="./pages/box-model/box.html">The Box Model（盒模型）</a></li>
-                <li><a href="./pages/cascading-and-inheritance/cascading.html">Cascading and Inheritance（层叠与继承）</a></li>
-            </ul>
-        </nav>
+      <h1>CSS Exercises: Getting Start</h1>
+      <nav>
+        <ul>
+          <li><a href="./../index.html">主页</a></li>
+          <li><a href="#">Getting Start（初步认识 CSS ）</a></li>
+          <li>
+            <a href="./pages/selector/selector.html">Selector（ CSS 解释器）</a>
+          </li>
+          <li>
+            <a href="./pages/box-model/box.html">The Box Model（盒模型）</a>
+          </li>
+          <li>
+            <a href="./pages/cascading-and-inheritance/cascading.html"
+              >Cascading and Inheritance（层叠与继承）</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
-
+    <hr />
     <main>
-        
+      <h2>Getting Start（初步认识 CSS ）</h2>
+      <p>
+        CSS（层叠样式表）是一种用于描述 HTML
+        文档外观的样式表语言。它允许开发者控制网页的布局、颜色、字体等视觉效果。
+      </p>
+      <p>
+        CSS 的基本语法包括<span
+          class="highlight"
+          style="font-size: 1.1rem; background-color: lightblue"
+        >
+          选择器 </span
+        >和<span
+          class="highlight"
+          style="font-size: 1.1rem; background-color: lightblue"
+        >
+          声明块 </span
+        >。选择器用于选择要应用样式的 HTML
+        元素，而声明块则包含一组属性和对应的值。
+      </p>
+      <p>例如，以下 CSS 规则将所有段落的文本颜色设置为蓝色：</p>
+      <pre><code>p {
+    color: blue;
+}</code></pre>
+      <p style="color: blue">
+        在这个例子中，<mark style="background-color: lightgreen"
+          ><code> p </code></mark
+        >
+        是选择器，表示所有的段落元素。<mark style="background-color: lightgreen"
+          ><code> color </code></mark
+        >
+        是属性，<mark style="background-color: lightgreen"
+          ><code> blue </code></mark
+        >
+        是值。
+      </p>
+      <blockquote
+        style="
+          margin: 1em 0;
+          padding: 0.5em 1em;
+          border-left: 4px solid #ccc;
+          background-color: #f9f9f9;
+          color: #555;
+          font-style: italic;
+        "
+      >
+        <p>
+          CSS 还支持多种选择器，如类选择器、ID
+          选择器和伪类选择器等，可以帮助开发者更精确地选择要应用样式的元素。
+        </p>
+        <p>通过使用 CSS，开发者可以创建美观、易于使用和响应式的网站。</p>
+        <p>
+          在本节中，我们将介绍 CSS
+          的基本概念和语法，并提供一些简单的示例来帮助您入门。
+        </p>
+      </blockquote>
     </main>
 
     <footer>
-        <hr />
-        <p>Copyright &copy; 2025 Karene Pitaya. All rights reserved.</p>
+      <hr />
+      <p>Copyright &copy; 2025 Karene Pitaya. All rights reserved.</p>
     </footer>
-</body>
+  </body>
 </html>
