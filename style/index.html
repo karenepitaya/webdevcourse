@@ -11,6 +11,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="text-formating-intermediate.css" />
+    <link rel="stylesheet" href="./list-complicated.css" />
     <title>CSS Exercises Page</title>
   </head>
   <body>
@@ -91,6 +92,142 @@
           的基本概念和语法，并提供一些简单的示例来帮助您入门。
         </p>
       </blockquote>
+
+      <article class="list-style">
+        <h3>此处对列表进行一些简单的样式化尝试</h3>
+        <hr />
+        <h4>无序列表（ul）</h4>
+        <ul class="none">
+          <li>苹果</li>
+          <li>香蕉</li>
+          <li>橘子</li>
+        </ul>
+        <ul class="thumbs-up">
+          <li>起床</li>
+          <li>洗脸</li>
+          <li>吃早餐</li>
+        </ul>
+
+        <hr />
+        <h4>有序列表（ol）</h4>
+        <ol class="none">
+          <li>起床</li>
+          <li>洗脸</li>
+          <li>吃早餐</li>
+        </ol>
+        <ol class="emoji-faces">
+          <li>笑一下</li>
+          <li>再笑</li>
+          <li>一直笑</li>
+        </ol>
+
+        <hr />
+        <h4>定义列表（dl）</h4>
+        <dl>
+          <dt>HTML</dt>
+          <dd>超文本标记语言</dd>
+          <dt>CSS</dt>
+          <dd>层叠样式表</dd>
+        </dl>
+        <hr />
+        <h4>以上使用的资源总结</h4>
+        <p>
+          <a
+            href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/list-style"
+            target="_blank"
+            rel="noopener"
+            >list-style</a
+          >、<a
+            href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@counter-style"
+            target="_blank"
+            rel="noopener"
+            >@counter-style</a
+          >、
+          <a
+            href="https://mdn.github.io/css-examples/counter-style-demo/"
+            target="_blank"
+            rel="noopener"
+            >CSS @counter-style Demo</a
+          >、
+          <a href="https://emojikeyboard.io/" target="_blank" rel="noopener"
+            >Emoji Chart</a
+          >
+        </p>
+      </article>
+      <hr />
+      <article
+        class="challenge"
+        style="
+          background-color: #fff;
+          color: #333;
+          font-family: 'Times New Roman', serif, Helvetica, sans-serif;
+          padding: 1em;
+          margin: 0;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <h1
+          style="
+            color: #f44336;
+            font-size: 2em;
+            font-family: Georgia, Times, serif;
+            border-bottom: 10px dotted #4caf50;
+          "
+        >
+          Jane Doe
+        </h1>
+        <div
+          class="job-title"
+          style="
+            display: inline-block;
+            color: #ffffff;
+            font-weight: bold;
+            background-color: #ff6d00;
+            padding: 0.2em 0.5em;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          "
+        >
+          Web Developer
+        </div>
+        <p>
+          Far far away, behind the word mountains, far from the countries
+          Vokalia and Consonantia, there live the blind texts. Separated they
+          live in Bookmarksgrove right at the coast of the Semantics, a large
+          language ocean.
+        </p>
+
+        <p>
+          A small river named Duden flows by their place and supplies it with
+          the necessary regelialia. It is a paradisematic country, in which
+          roasted parts of sentences fly into your mouth.
+        </p>
+
+        <h2 style="font-size: 1.5em; font-style: italic">
+          Contact information
+        </h2>
+        <ul>
+          <li>
+            Email:
+            <a
+              href="mailto:jane@example.com"
+              style="text-decoration: #558b2f none; color: #00897b"
+              >jane@example.com</a
+            >
+          </li>
+          <li>
+            Web:
+            <a
+              href="https://example.com"
+              style="text-decoration: #f50057 wavy underline; color: #455a64"
+              >https://example.com</a
+            >
+          </li>
+          <li>Tel: 123 45678</li>
+        </ul>
+      </article>
     </main>
 
     <footer>

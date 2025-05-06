@@ -130,3 +130,27 @@ img {
     font-size: 0.875rem;
   }
 }
+
+
+a[target="_blank"]::after {
+  content: "🡕";  /* 或者用 "🔗", "↗", "🌐" 等图标 */
+  display: inline-block;
+  text-decoration: none;
+  font-size: 0.9em;
+  margin-left: 0.25em;
+}
+
+/*
+a[target="_blank"]::after {
+  content: "";
+  display: inline-block;
+  background: url('data:image/svg+xml;utf8,<svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" height="12" width="12" viewBox="0 0 24 24"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42L17.59 5H14V3z"/><path fill="none" d="M0 0h24v24H0z"/></svg>')
+    no-repeat center center;
+  background-size: contain;
+  width: 1em;
+  height: 1em;
+  margin-left: 0.3em;
+  vertical-align: text-top;
+}
+*/
+
