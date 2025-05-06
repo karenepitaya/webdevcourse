@@ -133,6 +133,7 @@ img {
 
 
 a[target="_blank"]::after {
+  color: #555; /* 链接图标颜色与正文一致 */
   content: "🡕";  /* 或者用 "🔗", "↗", "🌐" 等图标 */
   display: inline-block;
   text-decoration: none;
