@@ -12,11 +12,11 @@
       href="./../../../src/favicon96-css-pages.png"
       type="image/x-icon"
     />
-    <title>The Box Model</title>
+    <title>Selector</title>
   </head>
   <body>
     <header>
-      <h1>CSS Exercises: The Box Model</h1>
+      <h1>CSS Exercises: Selectors</h1>
       <nav>
         <ul>
           <li><a href="./../../../index.html">主页</a></li>
@@ -24,10 +24,10 @@
             <a href="./../../index.html">Getting Start（初步认识 CSS ）</a>
           </li>
           <li>
-            <a href="./../selectors/selectors.html">Selectors（ CSS 选择器）</a>
+            <a href="#">Selectors（ CSS 选择器）</a>
           </li>
           <li>
-            <a href="#">The Box Model（盒模型）</a>
+            <a href="./../box-model/box.html">The Box Model（盒模型）</a>
           </li>
           <li>
             <a href="./../cascading-and-inheritance/cascading.html"
@@ -39,19 +39,21 @@
     </header>
     <hr />
     <main>
-        <h2>The Box Model（盒模型）</h2>
-        <p>
-            盒模型是 CSS 中用于描述元素布局和尺寸的基本概念。每个 HTML 元素都可以看作一个矩形盒子，包含以下部分：
-        </p>
-        <ul>
-            <li>内容区域（content）：元素的实际内容。</li>
-            <li>内边距（padding）：内容与边框之间的空间。</li>
-            <li>边框（border）：围绕元素的边框。</li>
-            <li>外边距（margin）：元素与其他元素之间的空间。</li>
-        </ul>
-        <p>例如：</p>
-        <pre><code>div { padding: 10px; border: 1px solid black; }</code></pre>
-        <p>在这个例子中，<span class="highlight">div</span> 元素有 10 像素的内边距和 1 像素的黑色边框。</p>
+      <h2>Selectors（ CSS 选择器）</h2>
+      <p>
+        CSS 选择器用于选择要应用样式的 HTML
+        元素。常见的选择器包括元素选择器、类选择器和 ID 选择器。
+      </p>
+      <p>例如，以下 CSS 规则将所有段落的文本颜色设置为蓝色：</p>
+      <pre><code>p { color: blue; }</code></pre>
+      <p>
+        在这个例子中，<span class="highlight">p</span>
+        是元素选择器，表示所有的段落元素。
+      </p>
+      <p>
+        类选择器以点号（<span class="highlight">.</span
+        >）开头，用于选择具有特定类的元素。例如：
+      </p>
     </main>
   </body>
 </html>

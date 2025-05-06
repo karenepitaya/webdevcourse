@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CSS 进阶" />
+    <meta name="author" content="Karene Pitaya" />
+    <link rel="stylesheet" href="./../../text-formating-intermediate.css" />
+    <link rel="stylesheet" href="./../../list-complicated.css" />
+    <link
+      rel="shortcut icon"
+      href="./../../../src/favicon96-css-pages.png"
+      type="image/x-icon"
+    />
+    <title>Cascading and Inheritance</title>
+  </head>
+  <body>
+    <header>
+      <h1>CSS Exercises: Cascading and Inheritance</h1>
+      <nav>
+        <ul>
+          <li><a href="./../../../index.html">主页</a></li>
+          <li>
+            <a href="./../../index.html">Getting Start（初步认识 CSS ）</a>
+          </li>
+          <li>
+            <a href="./../selectors/selectors.html">Selectors（ CSS 选择器）</a>
+          </li>
+          <li>
+            <a href="./../box-model/box.html">The Box Model（盒模型）</a>
+          </li>
+          <li>
+            <a href="#">Cascading and Inheritance（层叠与继承）</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
+    <main>
+        <h2>Cascading and Inheritance（层叠与继承）</h2>
+        <p>
+            CSS 的层叠性允许多个样式规则应用于同一元素。浏览器根据特定的优先级规则决定使用哪个样式。
+        </p>
+        <p>例如：</p>
+        <pre><code>h1 { color: red; } /* 规则 1 */</code></pre>
+        <pre><code>h1 { color: blue; } /* 规则 2 */</code></pre>
+        <p>在这个例子中，<span class="highlight">h1</span> 元素的颜色将是蓝色，因为规则 2 在规则 1 之后定义。</p>
+        <p>CSS 的继承性允许某些属性从父元素传递到子元素。例如，字体和颜色属性通常会被继承。</p>
+    </main>
+  </body>
+</html>
