@@ -6,7 +6,8 @@
     <meta name="description" content="CSS 进阶" />
     <meta name="author" content="Karene Pitaya" />
     <link rel="stylesheet" href="./../../text-formating-intermediate.css" />
-    <link rel="stylesheet" href="./../../list-complicated.css">
+    <link rel="stylesheet" href="./../../list-complicated.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link
       rel="shortcut icon"
       href="./../../../src/favicon96-css-pages.png"
@@ -54,6 +55,117 @@
         类选择器以点号（<span class="highlight">.</span
         >）开头，用于选择具有特定类的元素。例如：
       </p>
+      <article>
+        <hr />
+        <section class="types-of-selectors example">
+          <h4>选择器的种类</h4>
+          <ul>
+            <li>
+              元素选择器（Element Selector）:
+              <pre><code>h1 {
+}             </code></pre>
+            </li>
+            <li>
+              类选择器（Class Selector）:
+              <pre><code>.box {
+}             </code></pre>
+            </li>
+            <li>
+              ID 选择器（ID Selector）:
+              <pre><code>#unique {
+}             </code></pre>
+            </li>
+            <li>
+              属性选择器（Attribute Selector）:
+              <pre><code>a[title] {
+}
+a[href="https://example.com"] {
+}             </code></pre>
+            </li>
+            <li>
+              伪类选择器（Pseudo-class Selector）:
+              <pre><code>a:hover {
+}             </code></pre>
+            </li>
+            <li>
+              伪元素选择器（Pseudo-element Selector）:
+              <pre><code>p::first-line {
+}             </code></pre>
+            </li>
+          </ul>
+        </section>
+        <hr />
+        <section class="attribute-selector example">
+          <h4>属性选择器与字符串匹配运算符</h4>
+          <pre><code>&lt;h1&gt;Attribute presence and value selectors&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li class=&quot;a&quot;&gt;Item 2&lt;/li&gt;
+  &lt;li class=&quot;a b&quot;&gt;Item 3&lt;/li&gt;
+  &lt;li class=&quot;ab&quot;&gt;Item 4&lt;/li&gt;
+  &lt;li class=&quot;a-b&quot;&gt;Item 5&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+          <pre><code>body {
+  font-family: sans-serif;
+}
+li[class] {
+  font-size: 120%;
+}
+
+li[class=&quot;a&quot;] {
+  background-color: yellow;
+}
+
+li[class~=&quot;a&quot;] {
+  color: red;
+}
+li[class|=&quot;a&quot;] {
+  font-style: italic;
+}</code></pre>
+          <div class="test-one">
+            <h1>Attribute presence and value selectors</h1>
+            <ul>
+              <li>Item 1</li>
+              <li class="a">Item 2</li>
+              <li class="a b">Item 3</li>
+              <li class="ab">Item 4</li>
+              <li class="a-b">Item 5</li>
+            </ul>
+          </div>
+          <hr />
+          <pre><code>&lt;h1&gt;Attribute substring matching selectors&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li class=&quot;a&quot;&gt;Item 1&lt;/li&gt;
+  &lt;li class=&quot;ab&quot;&gt;Item 2&lt;/li&gt;
+  &lt;li class=&quot;bca&quot;&gt;Item 3&lt;/li&gt;
+  &lt;li class=&quot;bcabc&quot;&gt;Item 4&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+          <pre><code>body {
+  font-family: sans-serif;
+}
+
+li[class^=&quot;a&quot;] {
+  font-size: 120%;
+}
+
+li[class$=&quot;a&quot;] {
+  background-color: yellow;
+}
+
+li[class*=&quot;a&quot;] {
+  color: red;
+}         </code></pre>
+          <div class="test-two">
+            <h1>Attribute substring matching selectors</h1>
+            <ul>
+              <li class="a">Item 1</li>
+              <li class="ab">Item 2</li>
+              <li class="bca">Item 3</li>
+              <li class="bcabc">Item 4</li>
+            </ul>
+          </div>
+        </section>
+      </article>
     </main>
   </body>
 </html>
