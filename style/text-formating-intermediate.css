@@ -131,10 +131,9 @@ img {
   }
 }
 
-
 a[target="_blank"]::after {
   color: #555; /* 链接图标颜色与正文一致 */
-  content: "🡕";  /* 或者用 "🔗", "↗", "🌐" 等图标 */
+  content: "🡕"; /* 或者用 "🔗", "↗", "🌐" 等图标 */
   display: inline-block;
   text-decoration: none;
   font-size: 0.9em;
@@ -154,4 +153,44 @@ a[target="_blank"]::after {
   vertical-align: text-top;
 }
 */
+/* 引用快样式 */
+blockquote {
+  background-color: #f0f8ff; /* 淡蓝色背景 */
+  border-left: 4px solid #007acc; /* 深蓝色左边框 */
+  padding: 1em;
+  margin: 1em 0;
+  font-style: italic;
+  color: #555; /* 深灰色文字 */
+}
 
+blockquote p {
+  margin: 0; /* 去掉段落的默认边距 */
+}
+blockquote ul {
+  margin: 0; /* 去掉列表的默认边距 */
+  padding-left: 1.5em; /* 左侧缩进 */
+}
+blockquote li {
+  margin: 0.5em 0; /* 列表项之间的间距 */
+  list-style-type: disc; /* 圆点列表 */
+  color: #333; /* 深色文字，易于阅读 */
+}
+
+/* 代码块中的代码 */
+blockquote code {
+  background-color: #e0f7fa; /* 淡蓝色背景 */
+  padding: 0.2em 0.4em; /* 内边距 */
+  border-radius: 3px; /* 圆角 */
+  font-family: Consolas, "Courier New", monospace; /* 等宽字体 */
+  font-size: 0.95em; /* 字体大小 */
+  color: #007acc; /* 深蓝色文字 */
+}
+
+blockquote pre {
+  background-color: #e0f7fa; /* 淡蓝色背景 */
+  padding: 1em; /* 内边距 */
+  border-radius: 4px; /* 圆角 */
+  font-family: "Fira Code", monospace; /* 等宽字体 */
+  font-size: 0.95em; /* 字体大小 */
+  color: #333; /* 深色文字，易于阅读 */
+}

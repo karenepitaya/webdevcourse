@@ -173,6 +173,45 @@ li[class*=&quot;a&quot;] {
             </ul>
           </div>
         </section>
+        <hr />
+        <section class="pseudo-class-and-pseudo-element example">
+          <h4>伪类选择器与伪元素选择器</h4>
+          <blockquote>
+            <p>
+              伪类是选择器的一种，它用于选择处于特定状态的元素，比如当它们是这一类型的第一个元素时，
+              或者是当鼠标指针悬浮在元素上面的时候。它们表现得会像是你向你的文档的某个部分应用了一个类一样，
+              帮你在你的标记文本中减少多余的类，让你的代码更灵活、更易于维护。
+            </p>
+            <br />
+            <p>
+              伪元素也是选择器的一种，它用于选择元素的特定部分，比如第一个字母或者第一个行。
+              它们表现得会像是你向你的文档的某个部分应用了一个类一样，帮你在你的标记文本中减少多余的类，
+              让你的代码更灵活、更易于维护。</p>
+            <br />
+            <p>
+              伪类和伪元素选择器的语法是一样的，都是在选择器后面加冒号（<span
+                class="highlight"
+                >:</span
+              >），后面跟上伪类或伪元素的名称。
+            </p>
+            <p>
+              伪类选择器的名称前面有一个冒号（<span class="highlight">:</span
+              >），而伪元素选择器的名称前面有两个冒号（<span class="highlight"
+                >::</span
+              >）。
+            </p>
+          </blockquote>
+          <hr />
+          <h4>简单示例：超链接不同状态的样式</h4>
+            <div class="test-three" id="test-three">
+              <ul>
+                <li><a href="#test-three" >点我将在本页面打开链接</a></li>
+                <li><a href="https://example.com" target="_blank" rel="noopener">点我将在新页面打开链接</a></li>
+                <li><a href="#test-three" >点我将在本页面打开链接</a></li>
+                <li><a href="https://example.com" target="_blank" rel="noopener">点我将在新页面打开链接</a></li>
+              </ul>
+            </div>
+        </section>
       </article>
     </main>
   </body>

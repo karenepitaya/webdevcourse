@@ -1,18 +1,4 @@
-.types-of-selectors ul {
-  list-style: disc inside;
-  padding: 0.5em;
-}
-
-.types-of-selectors ul li {
-  margin: 0.5em 0;
-  position: relative;
-  padding-left: 0.5em;
-}
-
-.types-of-selectors ul li::marker {
-  content: "🍀 "; /* 任意 emoji 都行 */
-}
-
+/*-----------------------全局CSS------------------*/
 /* 行内代码 */
 code {
   background-color: #f5f5f5;
@@ -40,13 +26,30 @@ pre code {
 }
 
 section[class~="example"] {
-  background-color: #FFF9C4; /* 柔和的黄色背景 */
+  background-color: #fff9c4; /* 柔和的黄色背景 */
   color: #333; /* 深色文字，易于阅读 */
   padding: 1em;
   border-radius: 8px;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
 }
 
+/*-----------------------types-of-selectors------------------*/
+.types-of-selectors ul {
+  list-style: disc inside;
+  padding: 0.5em;
+}
+
+.types-of-selectors ul li {
+  margin: 0.5em 0;
+  position: relative;
+  padding-left: 0.5em;
+}
+
+.types-of-selectors ul li::marker {
+  content: "🍀 "; /* 任意 emoji 都行 */
+}
+
+/*-----------------------test-one--------------------*/
 .test-one li[class] {
   font-size: 120%;
 }
@@ -63,6 +66,7 @@ section[class~="example"] {
   font-style: italic;
 }
 
+/*-----------------------test-two--------------------*/
 .test-two li[class^="a"] {
   font-size: 120%;
 }
@@ -73,4 +77,51 @@ section[class~="example"] {
 
 .test-two li[class*="a"] {
   color: red;
+}
+
+/*-----------------------test-three--------------------*/
+.test-three a {
+  color: #0077cc;
+  text-decoration: none;
+  position: relative;
+  font-weight: bold;
+  transition: all 0.3s ease; /* 当元素的任何支持过渡的属性发生变化时，使用“0.3秒的动画、匀速开始/结束”的方式平滑地过渡。比如颜色、大小、阴影等改变时，不会瞬间跳变，而是用动画平滑过渡。 */
+}
+
+/* 未访问链接 */
+.test-three a:link {
+  color: #0077cc;
+}
+
+/* 已访问链接 */
+.test-three a:visited {
+  color: #663399;
+}
+
+/* 鼠标悬停 */
+.test-three a:hover {
+  color: #ff6600;
+  text-decoration: underline dotted;
+}
+
+/* 点击状态 */
+.test-three a:active {
+  color: red;
+  transform: scale(
+    0.98
+  ); /* 让元素缩放到 98% 的大小（稍微缩小一点点）。通常用于按钮点击时的动画反馈，看起来像被“按下去”一样。 */
+}
+
+/* 给 target="_blank" 的链接加图标 */
+.test-three a[target="_blank"]::after {
+  content: " 🔗";
+  font-size: 0.9em;
+  vertical-align: middle; /* 让这个元素和它的“基线相邻的内容”垂直居中对齐。比如一个小图标（🔗）放在文本旁边时，用这个可以让图标和文字在垂直方向对齐得更自然。 */
+  margin-left: 0.2em;
+  transition: transform 0.3s ease; /* 当 transform 属性变化时，用 0.3 秒的动画平滑过渡。相比 transition: all 更加精确，只影响 transform 属性，提高性能、避免意外动画。 */
+}
+
+/* 悬停时图标稍微跳动 */
+.test-three a[target="_blank"]:hover::after {
+  transform: translateY(-2px) rotate(-10deg); /* 把元素往上移动 2 像素，并逆时针旋转 10 度。比如在 :hover 伪类中使用时，可以让图标在鼠标悬停时“跳起来并倾斜”一点，看起来更有动感和趣味。 */
 }
