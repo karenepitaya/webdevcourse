@@ -25,6 +25,13 @@ pre code {
   color: #333;
 }
 
+span.highlight {
+  background-color: #ffeb3b; /* 明亮的黄色背景 */
+  color: #333; /* 深色文字，易于阅读 */
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
 section[class~="example"] {
   background-color: #fff9c4; /* 柔和的黄色背景 */
   color: #333; /* 深色文字，易于阅读 */
@@ -34,18 +41,18 @@ section[class~="example"] {
 }
 
 /*-----------------------types-of-selectors------------------*/
-.types-of-selectors ul {
+ul.special-list {
   list-style: disc inside;
   padding: 0.5em;
 }
 
-.types-of-selectors ul li {
+ul.special-list li {
   margin: 0.5em 0;
   position: relative;
   padding-left: 0.5em;
 }
 
-.types-of-selectors ul li::marker {
+ul.special-list li::marker {
   content: "🍀 "; /* 任意 emoji 都行 */
 }
 
