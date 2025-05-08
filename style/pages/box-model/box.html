@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="CSS 进阶" />
     <meta name="author" content="Karene Pitaya" />
-    <link rel="stylesheet" href="./../../text-formating-intermediate.css" />
-    <link rel="stylesheet" href="./../../list-complicated.css">
+    <link rel="stylesheet" href="./../../global-style.css" />
     <link
       rel="shortcut icon"
       href="./../../../src/favicon96-css-pages.png"
@@ -39,19 +38,145 @@
     </header>
     <hr />
     <main>
-        <h2>The Box Model（盒模型）</h2>
-        <p>
-            盒模型是 CSS 中用于描述元素布局和尺寸的基本概念。每个 HTML 元素都可以看作一个矩形盒子，包含以下部分：
-        </p>
+      <h2>The Box Model（盒模型）</h2>
+      <p>
+        盒模型是 CSS 中用于描述元素布局和尺寸的基本概念。每个 HTML
+        元素都可以看作一个矩形盒子，包含以下部分：
+      </p>
+      <img src="./../../../src/box-model.gif" alt="Box Model Image" />
+      <ul>
+        <li>内容区域（content）：元素的实际内容。</li>
+        <li>内边距（padding）：内容与边框之间的空间。</li>
+        <li>边框（border）：围绕元素的边框。</li>
+        <li>外边距（margin）：元素与其他元素之间的空间。</li>
+      </ul>
+      <p>例如：</p>
+      <pre><code>div { padding: 10px; border: 1px solid black; }</code></pre>
+      <p>
+        在这个例子中，<span class="highlight">div</span> 元素有 10
+        像素的内边距和 1 像素的黑色边框。
+      </p>
+      <article>
+        <section class="box-model standard-box">
+          <h4>标准盒模型</h4>
+          <blockquote>
+            <p>
+              在标准盒模型中，如果在盒子上设置了 inline-size 和 block-size（或
+              width 和 height）属性值，这些值就定义了内容盒子的 inline-size 和
+              block-size（水平语言中为 width 和
+              height）。然后将任何内边距和边框添加到这些尺寸中，以获得盒子所占的总大小（见下图）。
+            </p>
+          </blockquote>
+          <p>假设一个盒子的 CSS 如下：</p>
+          <pre><code>.box {
+  width: 350px;
+  height: 150px;
+  margin: 10px;
+  padding: 25px;
+  border: 5px solid black;
+}         </code></pre>
+          <p>
+            方框实际占用的空间宽为 410px（350 + 25 + 25 + 5 + 5），高为
+            210px（150 + 25 + 25 + 5 + 5）。
+          </p>
+          <img
+            src="./../../../src/standard-box-model.png"
+            alt="standard-box-model.png"
+          />
+        </section>
+        <hr />
+        <section class="box-model alternate-box">
+          <h4>替代盒模型</h4>
+          <blockquote>
+            <p>
+              在替代盒模型中，任何宽度都是页面上可见方框的宽度。内容区域的宽度是该宽度减去填充和边框的宽度（见下图）。无需将边框和内边距相加，即可获得盒子的实际大小。
+            </p>
+          </blockquote>
+          <p>
+            要为某个元素使用替代模型，可对其设置
+            <code>box-sizing: border-box：</code>
+          </p>
+          <pre><code>.box {
+  box-sizing: border-box;
+  inline-size: 350px;
+  block-size: 150px;
+  margin: 10px;
+  padding: 25px;
+  border: 5px solid black;
+}         </code></pre>
+          <p>现在，盒子实际占用的空间在行向为 350px，在块向为 150px。</p>
+          <img
+            src="./../../../src/alternate-box-model.png"
+            alt="alternate-box-model"
+          />
+        </section>
+        <hr />
+        <section class="display-type">
+          <h4>区块盒子和行内盒子</h4>
+          <blockquote>
+            <p>
+              在 CSS 中，我们有几种类型的盒子，一般分为区块盒子（block
+              boxes）和行内盒子（inline
+              boxes）。类型指的是盒子在页面流中的行为方式以及与页面上其他盒子的关系。盒子有内部显示（inner
+              display type）和外部显示（outer display type）两种类型。
+            </p>
+          </blockquote>
+          <h5>外部显示类型</h5>
+          <p>一个拥有 block 外部显示类型的盒子会表现出以下行为：</p>
+          <ul>
+            <li>盒子会产生换行。</li>
+            <li>width 和 height 属性可以发挥作用。</li>
+            <li>内边距、外边距和边框会将其他元素从当前盒子周围“推开”。</li>
+            <li>
+              如果未指定
+              width，方框将沿行向扩展，以填充其容器中的可用空间。在大多数情况下，盒子会变得与其容器一样宽，占据可用空间的
+              100%。
+            </li>
+          </ul>
+          <h5>内部显示类型</h5>
+          <p>一个拥有 inline 外部显示类型的盒子会表现出以下行为：</p>
+          <ul>
+            <li>盒子不会产生换行。 width 和 height 属性将不起作用。</li>
+            <li>
+              垂直方向的内边距、外边距以及边框会被应用但是不会把其他处于 inline
+              状态的盒子推开。
+            </li>
+            <li>
+              水平方向的内边距、外边距以及边框会被应用且会把其他处于 inline
+              状态的盒子推开。
+            </li>
+          </ul>
+        </section>
+      </article>
+      <aside>
+        <strong>另请关注：</strong>
         <ul>
-            <li>内容区域（content）：元素的实际内容。</li>
-            <li>内边距（padding）：内容与边框之间的空间。</li>
-            <li>边框（border）：围绕元素的边框。</li>
-            <li>外边距（margin）：元素与其他元素之间的空间。</li>
+          <li>
+            <a
+              href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/display"
+              target="_blank"
+              rel="noopener noreferrer"
+              >MDN 文档: CSS Display</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow#%E6%98%BE%E7%A4%BA%E5%B1%9E%E6%80%A7%E5%92%8C%E6%B5%81%E5%B8%83%E5%B1%80"
+              target="_blank"
+              rel="noopener noreferrer"
+              >MDN 文档: 常规流中的块和内联布局</a
+            >- Learn Layout
+          </li>
+          <li>
+            <a
+              href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing"
+              target="_blank"
+              rel="noopener noreferrer"
+              >MDN 文档: 掌握外边距折叠</a
+            >
+          </li>
         </ul>
-        <p>例如：</p>
-        <pre><code>div { padding: 10px; border: 1px solid black; }</code></pre>
-        <p>在这个例子中，<span class="highlight">div</span> 元素有 10 像素的内边距和 1 像素的黑色边框。</p>
+      </aside>
     </main>
   </body>
 </html>

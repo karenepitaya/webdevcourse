@@ -1,0 +1,104 @@
+/* =========== test-last =========== */
+
+.test-last .fancy-dl {
+  max-width: 600px;
+  margin: 2em auto;
+  padding: 1em 1.5em;
+  background: #f9f9f9;
+  border-left: 4px solid #007acc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5em 1em;
+  transition: background 0.3s ease;
+}
+
+.test-last .fancy-dl:hover {
+  background: #f0f8ff;
+}
+
+.test-last .fancy-dl dt {
+  font-weight: bold;
+  color: #007acc;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.test-last .fancy-dl dt:hover {
+  transform: translateX(5px);
+}
+
+.test-last .fancy-dl dd {
+  margin: 0;
+  color: #333;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.test-last .fancy-dl dd:hover {
+  color: #444;
+}
+
+/* Emoji 图标伪元素样式 */
+.test-last .fancy-dl .html::before {
+  content: "🌐 ";
+}
+.test-last .fancy-dl .css::before {
+  content: "🎨 ";
+}
+.test-last .fancy-dl .js::before {
+  content: "⚙️ ";
+}
+
+/* =========== test-last-more =========== */
+
+.test-last-more dl {
+  max-width: 100%;
+  margin: 2em auto;
+  padding: 1.0em 1.5em;
+  background: #f8f9fa;
+  border-left: 5px solid #2a9d8f;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5em 1em;
+  transition: background 0.3s ease;
+}
+
+.test-last-more dl:hover {
+  background: #e0f7f4;
+}
+
+.test-last-more dt {
+  font-weight: bold;
+  color: #2a9d8f;
+  position: relative;
+  padding-left: 1.8em;
+  transition: transform 0.2s ease;
+}
+
+.test-last-more dt:hover {
+  transform: translateX(4px);
+}
+
+.test-last-more dt::before {
+  content: "📌";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.test-last-more dd {
+  margin: 0;
+  color: #333;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.test-last-more dd:hover {
+  color: #555;
+}

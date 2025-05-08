@@ -1,0 +1,82 @@
+.test-one ul {
+  list-style: revert; /* 使用浏览器默认样式 */
+  padding: revert; /* 使用浏览器默认样式 */
+}
+
+.test-one ul li::marker {
+  content: revert; /* 使用浏览器默认样式 */
+}
+
+.test-one ul li {
+  margin: revert; /* 使用浏览器默认样式 */
+  position: revert; /* 使用浏览器默认样式 */
+  padding-left: revert; /* 使用浏览器默认样式 */
+}
+
+.test-one .main {
+  color: rebeccapurple;
+  border: 2px solid #ccc;
+  padding: 1em;
+}
+
+.test-one .special {
+  color: black;
+  font-weight: bold;
+}
+
+.test-two ul {
+  list-style: revert; /* 使用浏览器默认样式 */
+  padding: revert; /* 使用浏览器默认样式 */
+  border: 2px dotted #9fb6ff;
+  color: #4527a0;
+}
+
+.test-two ul li::marker {
+  content: revert; /* 使用浏览器默认样式 */
+}
+
+.test-two ul li {
+  margin: revert; /* 使用浏览器默认样式 */
+  position: revert; /* 使用浏览器默认样式 */
+  padding-left: revert; /* 使用浏览器默认样式 */
+}
+
+.test-two .my-class-1 a {
+  color: inherit;
+}
+
+.test-two .my-class-2 a {
+  color: initial;
+}
+
+.test-two .my-class-3 a {
+  color: unset;
+}
+
+.test-three {
+  border: 2px dotted #4a148c;
+  padding: 1em;
+}
+
+.test-three .fix-this {
+  all: unset;
+}
+
+.test-four {
+  border: 2px dotted #4a148c;
+  padding: 1em;
+}
+
+.test-four h2 {
+  font-size: 2em;
+  color: #000;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.test-four .small {
+  font-size: 1em;
+}
+
+.test-four .bright {
+  color: rebeccapurple;
+}

@@ -1,0 +1,340 @@
+/* ========== 基础字体和背景设置 ========== */
+html {
+  font-size: 16px; /* 1rem = 16px */
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9f9; /* 柔和浅灰色背景 */
+  margin: 0;
+  padding: 0 1.5rem; /* 页面左右留白 */
+  line-height: 1.6;
+}
+
+/* ========== 标题分级 ========== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  color: #222; /* 稍微深一点，标题突出 */
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+/* ========== 段落样式 ========== */
+p {
+  font-size: 1rem;
+  color: #555; /* 比标题颜色浅一点，正文阅读更舒服 */
+  margin-top: 0;
+  margin-bottom: 1em;
+  line-height: 1.8;
+}
+
+/* ========== 水平线（hr）美化 ========== */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 2em 0;
+}
+
+/* ========== 图片适配 ========== */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* 图片轻微圆角，看起来柔和 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 图片轻微阴影，增加层次感 */
+}
+
+section{
+  background-color: #fff9c4; /* 柔和的黄色背景 */
+  color: #333; /* 深色文字，易于阅读 */
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== 响应式设计 ========== */
+
+/* 平板 (小于 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 0 1rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  h6 {
+    font-size: 0.875rem;
+  }
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+/* 手机 (小于 480px) */
+@media (max-width: 480px) {
+  body {
+    padding: 0 0.8rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.125rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  h6 {
+    font-size: 0.875rem;
+  }
+  p {
+    font-size: 0.875rem;
+  }
+}
+
+/* ========== 代码块样式 ========== */
+/* 行内代码 */
+code {
+  background-color: #f5f5f5;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.95em;
+  color: #c7254e;
+}
+
+/* 代码块 */
+pre {
+  background-color: #f5f5f5;
+  padding: 1em;
+  overflow-x: auto;
+  border-radius: 4px;
+  font-family: "Fira Code", monospace;
+  font-size: 0.95em;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  color: #333;
+}
+
+/* ========== 高亮块样式 ========== */
+span.highlight {
+  background-color: #ffeb3b; /* 明亮的黄色背景 */
+  color: #333; /* 深色文字，易于阅读 */
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+/* ========== 引用块样式 ========== */
+blockquote {
+  background-color: #f0f8ff; /* 淡蓝色背景 */
+  border-left: 4px solid #007acc; /* 深蓝色左边框 */
+  padding: 1em;
+  margin: 1em 0;
+  font-style: italic; /* 斜体 */
+  color: #555; /* 深灰色文字 */
+}
+
+blockquote p {
+  margin: 0; /* 去掉段落的默认边距 */
+}
+
+blockquote p + p {
+  margin-top: 0.5em; /* 段落之间的间距 */
+}
+
+blockquote ul {
+  margin: 0; /* 去掉列表的默认边距 */
+  padding-left: 1.5em; /* 左侧缩进 */
+}
+
+blockquote li {
+  margin: 0.5em 0; /* 列表项之间的间距 */
+  list-style-type: disc; /* 圆点列表 */
+  color: #333; /* 深色文字，易于阅读 */
+}
+
+/* 引用块中的行内代码 */
+blockquote code {
+  background-color: #e0f7fa; /* 淡蓝色背景 */
+  padding: 0.2em 0.4em; /* 内边距 */
+  border-radius: 3px; /* 圆角 */
+  font-family: Consolas, "Courier New", monospace; /* 等宽字体 */
+  font-size: 0.95em; /* 字体大小 */
+  color: #007acc; /* 深蓝色文字 */
+}
+
+/* 引用块中的代码块 */
+blockquote pre {
+  background-color: #e0f7fa; /* 淡蓝色背景 */
+  padding: 1em; /* 内边距 */
+  border-radius: 4px; /* 圆角 */
+  font-family: "Fira Code", monospace; /* 等宽字体 */
+  font-size: 0.95em; /* 字体大小 */
+  color: #333; /* 深色文字，易于阅读 */
+}
+
+/* ========== 无序列表样式 ========== */
+ul {
+  list-style: disc inside;
+  padding: 0.2em;
+}
+
+ul li {
+  margin: 0.5em 0;
+  position: relative;
+  padding-left: 0.5em;
+}
+
+ul li::marker {
+  content: "🍀 "; /* 任意 emoji 都行 */
+}
+
+/* ========== 链接样式 ========== */
+a {
+  color: #0077cc;
+  text-decoration: none;
+  position: relative;
+  font-weight: bold;
+  transition: all 0.3s ease; /* 当元素的任何支持过渡的属性发生变化时，使用“0.3秒的动画、匀速开始/结束”的方式平滑地过渡。比如颜色、大小、阴影等改变时，不会瞬间跳变，而是用动画平滑过渡。 */
+}
+
+/* 未访问链接 */
+a:link {
+  color: #0077cc;
+}
+
+/* 已访问链接 */
+a:visited {
+  color: #663399;
+}
+
+/* 鼠标悬停 */
+a:hover {
+  color: #ff6600;
+  text-decoration: underline dotted;
+}
+
+/* 点击状态 */
+a:active {
+  color: red;
+  transform: scale(
+    0.98
+  ); /* 让元素缩放到 98% 的大小（稍微缩小一点点）。通常用于按钮点击时的动画反馈，看起来像被“按下去”一样。 */
+}
+
+/* 给 target="_blank" 的链接加图标 */
+a[target="_blank"]::after {
+  display: inline-block;
+  content: " 🔗";
+  font-size: 0.9em;
+  vertical-align: middle; /* 让这个元素和它的“基线相邻的内容”垂直居中对齐。比如一个小图标（🔗）放在文本旁边时，用这个可以让图标和文字在垂直方向对齐得更自然。 */
+  margin-left: 0.2em;
+  transition: transform 0.3s ease; /* 当 transform 属性变化时，用 0.3 秒的动画平滑过渡。相比 transition: all 更加精确，只影响 transform 属性，提高性能、避免意外动画。 */
+}
+
+/* 悬停时图标稍微跳动 */
+a[target="_blank"]:hover::after {
+  transform: translateY(-2px) rotate(-10deg); /* 把元素往上移动 2 像素，并逆时针旋转 10 度。比如在 :hover 伪类中使用时，可以让图标在鼠标悬停时“跳起来并倾斜”一点，看起来更有动感和趣味。 */
+}
+
+/* ========== 描述列表样式 ========== */
+
+dl {
+  max-width: 80%;
+  margin: 2em auto;
+  padding: 1.5em;
+  background: #f8f9fa;
+  border-left: 5px solid #2a9d8f;
+  border-radius: 8px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5em 1em;
+  transition: background 0.3s ease;
+}
+
+dl:hover {
+  background: #e0f7f4;
+}
+
+dt {
+  font-weight: bold;
+  color: #2a9d8f;
+  position: relative;
+  padding-left: 1.8em;
+  transition: transform 0.2s ease;
+}
+
+dt:hover {
+  transform: translateX(4px);
+}
+
+dt::before {
+  content: "📌";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+dd {
+  margin: 0;
+  color: #333;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+dd:hover {
+  color: #555;
+}
