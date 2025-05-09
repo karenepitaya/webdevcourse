@@ -1,0 +1,223 @@
+@font-face {
+  font-family: "bodonixtregular";
+  src: url("./assets/webfontkit-20250509-073335/bodonixt-webfont.woff2")
+      format("woff2"),
+    url("./assets/webfontkit-20250509-073335/bodonixt-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "abhaya_librebold";
+  src: url("./assets/webfontkit-20250509-073335/abhayalibre-bold-webfont.woff2")
+      format("woff2"),
+    url("./assets/webfontkit-20250509-073335/abhayalibre-bold-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "abhaya_libreextrabold";
+  src: url("./assets/webfontkit-20250509-073335/abhayalibre-extrabold-webfont.woff2")
+      format("woff2"),
+    url("./assets/webfontkit-20250509-073335/abhayalibre-extrabold-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "abhaya_libremedium";
+  src: url("./assets/webfontkit-20250509-073335/abhayalibre-medium-webfont.woff2")
+      format("woff2"),
+    url("./assets/webfontkit-20250509-073335/abhayalibre-medium-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "abhaya_libreregular";
+  src: url("./assets/webfontkit-20250509-073335/abhayalibre-regular-webfont.woff2")
+      format("woff2"),
+    url("./assets/webfontkit-20250509-073335/abhayalibre-regular-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "abhaya_libresemibold";
+  src: url("./assets/webfontkit-20250509-073335/abhayalibre-semibold-webfont.woff2")
+      format("woff2"),
+    url("./assets/webfontkit-20250509-073335/abhayalibre-semibold-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* General setup */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: abhaya_libreextrabold, sans-serif;
+  line-height: 1.8rem;
+  font-size: 10px;
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+}
+
+/* Layout */
+
+section {
+  float: left;
+  width: 50%;
+}
+
+section h2 + p {
+  text-indent: 20px;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float: right;
+}
+
+footer {
+  clear: both;
+}
+
+header,
+section,
+aside,
+nav,
+footer {
+  padding: 20px;
+}
+
+/* header and footer */
+
+header,
+footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+h1 {
+  font-family: bodonixtregular, sans-serif;
+  font-size: 3.5rem;
+  color: #a66;
+  text-align: center;
+}
+h2 {
+  font-family: bodonixtregular, sans-serif;
+  font-size: 2.5rem;
+  color: #a66;
+  text-align: center;
+}
+p,
+li {
+  font-family: abhaya_libremedium, sans-serif;
+  font-size: 1rem;
+  color: #333;
+  text-align: justify;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+a:link {
+  color: #0077cc;
+}
+
+a:visited {
+  color: #663399;
+}
+
+a:hover {
+  color: #ff6600;
+  text-decoration: underline dotted;
+}
+
+a:active {
+  color: red;
+  transform: scale(0.98);
+}
+
+a[target="_blank"]::after {
+  content: "";
+  display: inline-block;
+  width: 1em; /* 与字体大小一致 */
+  height: 1em;
+  background-image: url(./assets/external-link-52.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+  margin-left: 0.25em;
+  transition: transform 0.3s ease;
+}
+
+a[target="_blank"]:hover::after {
+  transform: rotate(15deg) scale(1.1);
+  filter: brightness(1.2) saturate(1.2);
+}
+
+aside {
+  background: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  width: 180px;
+  height: 80px;
+  /* 可选样式 */
+  background-color: #f0f0f0;
+  margin: 15px 0;
+  text-align: center;
+}
+nav ul li:hover {
+  background-color: #e0e0e0;
+  cursor: pointer; /* 鼠标悬停时变成手指 */
+}
+
+nav ul li a {
+  font-size: 1.5rem;
+  display: block; /* 关键：让 <a> 占满 <li> */
+  width: 100%; /* 撑满 li 宽度 */
+  height: 100%; /* 撑满 li 高度 */
+  line-height: 80px; /* 垂直居中文本（与 li 高一致） */
+  color: #333;
+  padding: 0 1em; /* 水平内边距 */
+}
+
+nav ul li a:hover {
+  background-color: #e0e0e0;
+  color: #0077cc;
+  text-decoration: none;
+}
