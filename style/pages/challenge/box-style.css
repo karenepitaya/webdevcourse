@@ -1,0 +1,52 @@
+html {
+  font-family: sans-serif;
+}
+
+/* Your CSS below here */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 让 body 高度占满整屏 */
+  margin: 0; /* 去掉默认边距 */
+}
+
+.fancy-button {
+  padding: 1.2em;
+  width: 200px; /* 合理的大按钮宽度 */
+  height: 200px; /* 合理的高度，配合大字体让按钮显得大气 */
+
+  line-height: 200px; /* 与高度相同，实现文本垂直居中 */
+  text-align: center; /* 文本水平居中 */
+
+  font-size: 1.4rem; /* 大约 17.6px（1rem = 16px，1.1 × 16 = 17.6px） */
+
+  background-color: #4a90e2; /* 基础颜色：蓝色 */
+  color: #ffffff; /* 字体颜色为白 */
+  text-shadow: 0 1px 1px black; /* 黑色文字阴影提升可读性 */
+
+  border-radius: 0.5em; /* 精巧的圆角边框 */
+  border: 1px solid #3b78c2; /* 较深一点的边框色，比背景色略暗 */
+
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0.2) 100%
+  ); /* 指向右下角的黑色半透明渐变 */
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25),
+    /* 外部阴影，使按钮浮起 */ inset 3px 0 3px rgba(255, 255, 255, 0.4),
+    /* 内部白色阴影：左上角 */ inset 0 3px 3px rgba(255, 255, 255, 0.4),
+    /* 内部黑色阴影：右下角 */ inset 0 -3px 3px rgba(0, 0, 0, 0.4),
+    /* 内部黑色阴影：右下角 */ inset -3px 0 3px rgba(0, 0, 0, 0.4); /* 内部黑色阴影：右下角 */
+
+  cursor: pointer; /* 鼠标悬停手型 */
+  -webkit-user-select: none; /* 防止文字被选中，兼容 Safari */
+  user-select: none; /* 防止文字被选中 */
+  transition: transform 0.2s ease; /* 小动效 */
+}
+
+.fancy-button:hover {
+  transform: translateY(-2px);
+}

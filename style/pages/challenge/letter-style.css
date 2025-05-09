@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #ccc;
+}
+
+address {
+  position: absolute;
+  bottom: 8mm;
+  right: 20mm;
+}
+
+h1 {
+  position: absolute;
+  top: 12mm;
+  left: 20mm;
+  width: 128px;
+  height: 128px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 44px 0;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+article {
+  width: 210mm;
+  height: 297mm;
+  margin: 20px auto;
+  position: relative;
+  background: linear-gradient(
+        to bottom,
+        rgb(0%, 0%, 0%, 0.1),
+        rgb(100%, 100%, 100%, 0.1),
+        rgb(0%, 0%, 0%, 0.1)
+      )
+      no-repeat center,
+    url(./assets/top-image.png) top no-repeat,
+    url(./assets/bottom-image.png) bottom no-repeat, rgb(100%, 100%, 100%);
+  border-top: 1mm solid #c90000;
+  border-bottom: 1mm solid #c90000;
+}
+/* Your CSS below here */
+.logo-container {
+  position: absolute;
+  top: 18mm;
+  left: 20mm;
+  width: 128px;
+  height: 128px;
+}
+
+.logo-img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%; /* 使图像为圆形（如图像本身不是圆） */
+  filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.8)); /* 关键 */
+}

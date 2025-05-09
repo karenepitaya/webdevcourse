@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter Demo</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background: #f4f4f4;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 40px;
+        justify-content: center;
+      }
+
+      .card {
+        width: 200px;
+        text-align: center;
+        border-radius: 12px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        background: white;
+        padding: 10px;
+        transition: 0.3s ease;
+      }
+
+      .card img {
+        max-width: 100%;
+        border-radius: 12px;
+        transition: filter 0.1s ease;
+      }
+
+      .card:hover img {
+        filter: brightness(120%) saturate(120%) drop-shadow(2px 4px 4px #333);
+      }
+
+      .label {
+        margin-top: 8px;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+
+      /* 各种不同 filter 效果 */
+      .blur img {
+        filter: blur(2px);
+      }
+      .grayscale img {
+        filter: grayscale(100%);
+      }
+      .sepia img {
+        filter: sepia(100%);
+      }
+      .invert img {
+        filter: invert(100%);
+      }
+      .contrast img {
+        filter: contrast(200%);
+      }
+      .hue-rotate img {
+        filter: hue-rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card blur">
+      <img src="https://picsum.photos/200/140" alt="blur" />
+      <div class="label">blur(2px)</div>
+    </div>
+
+    <div class="card grayscale">
+      <img src="https://picsum.photos/200/140" alt="grayscale" />
+      <div class="label">grayscale(100%)</div>
+    </div>
+
+    <div class="card sepia">
+      <img src="https://picsum.photos/200/140" alt="sepia" />
+      <div class="label">sepia(100%)</div>
+    </div>
+
+    <div class="card invert">
+      <img src="https://picsum.photos/200/140" alt="invert" />
+      <div class="label">invert(100%)</div>
+    </div>
+
+    <div class="card contrast">
+      <img src="https://picsum.photos/200/140" alt="contrast" />
+      <div class="label">contrast(200%)</div>
+    </div>
+
+    <div class="card hue-rotate">
+      <img src="https://picsum.photos/200/140" alt="hue-rotate" />
+      <div class="label">hue-rotate(180deg)</div>
+    </div>
+  </body>
+</html>

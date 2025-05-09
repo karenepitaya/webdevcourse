@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glassmorphism Modal</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background: url("https://picsum.photos/1200/800") center/cover no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+      }
+
+      .glass-modal {
+        width: 300px;
+        padding: 2em;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.15); /* 半透明 */
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(10px) saturate(150%);
+        -webkit-backdrop-filter: blur(10px) saturate(150%);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        text-align: center;
+        color: #fff;
+      }
+
+      h2 {
+        margin: 0 0 0.5em;
+      }
+
+      p {
+        font-size: 0.9em;
+      }
+
+      button {
+        margin-top: 1.2em;
+        padding: 0.5em 1em;
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        border-radius: 8px;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background: rgba(255, 255, 255, 0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="glass-modal">
+      <h1>Welcome!</h1>
+      <h2>This is a glass-like modal using <code style="font-family: 'Consolas';">backdrop-filter</code>.</h2>
+      <button style="font-size: 1.5em;">OK</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>按钮组件库示例</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Noto Sans", sans-serif;
+        background: #f5f7fa;
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        align-items: center;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5em;
+        font-weight: 500;
+        border: none;
+        border-radius: 0.75em;
+        padding: 0.6em 1.2em;
+        background: rgba(255, 255, 255, 0.15);
+        color: #fff;
+        -webkit-backdrop-filter: blur(6px);
+        backdrop-filter: blur(6px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        transition: all 0.25s ease;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .btn-sm {
+        font-size: 0.75rem;
+        padding: 0.4em 0.8em;
+      }
+
+      .btn-md {
+        font-size: 1rem;
+      }
+
+      .btn-lg {
+        font-size: 1.25rem;
+        padding: 0.8em 1.5em;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #6a5af9, #8b7dff);
+      }
+
+      .btn-danger {
+        background: linear-gradient(135deg, #ff4b5c, #ff6a6a);
+      }
+
+      .btn-success {
+        background: linear-gradient(135deg, #1fd1a5, #0bce83);
+      }
+
+      .btn-warning {
+        background: linear-gradient(135deg, #f9a825, #fbc02d);
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+      }
+
+      .btn:active {
+        transform: scale(0.97);
+      }
+
+      .btn:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      .group {
+        display: flex;
+        gap: 1em;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>按钮组件库示例</h2>
+
+    <div class="group">
+      <button class="btn btn-primary btn-sm">🚀 小按钮</button>
+      <button class="btn btn-danger btn-md">❌ 删除</button>
+      <button class="btn btn-success btn-lg">✅ 成功</button>
+      <button class="btn btn-warning btn-md" disabled>⚠️ 禁用</button>
+    </div>
+  </body>
+</html>
