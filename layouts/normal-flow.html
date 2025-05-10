@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../style/global-style.css" />
+    <link
+      rel="shortcut icon"
+      href="./../src/favicon96-layout-pages.png"
+      type="image/x-icon"
+    />
+    <title>Normal Flow</title>
+    <style>
+      div.test-one {
+        border: 1px dotted #000;
+        padding: 10px;
+        margin: 10px 0;
+      }
+      div.test-one ul,
+      div.test-one p,
+      div.test-one li {
+        all: revert;
+      }
+      div.test-one ul li::marker {
+        content: unset;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>正常布局流</h1>
+      <p>
+        正常布局流（normal flow）是指在不对页面进行任何布局控制时，浏览器默认的
+        HTML 布局方式。让我们快速地看一个 HTML 的例子：
+      </p>
+    </header>
+    <main>
+      <section>
+        <pre><code>&lt;p&gt;I love my cat.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Buy cat food&lt;/li&gt;
+  &lt;li&gt;Exercise&lt;/li&gt;
+  &lt;li&gt;Cheer up friend&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The end!&lt;/p&gt;
+            </code></pre>
+        <div class="test-one">
+          <p>I love my cat.</p>
+
+          <ul>
+            <li>Buy cat food</li>
+            <li>Exercise</li>
+            <li>Cheer up friend</li>
+          </ul>
+
+          <p>The end!</p>
+        </div>
+        <blockquote>
+          <p>
+            注意，HTML
+            元素完全按照源码中出现的先后次序显示——第一个段落、无序列表、第二个段落。
+          </p>
+          <p>
+            出现在另一个元素下面的元素被描述为块元素，与出现在另一个元素旁边的内联元素不同，内联元素就像段落中的单个单词一样。
+          </p>
+        </blockquote>
+        <strong
+          >当你使用 css
+          创建一个布局时，你正在离开正常布局流，但是对于页面上的多数元素，正常布局流将完全可以创建你所需要的布局。从一个结构良好的
+          Html
+          文档开始是非常重要，因为你可以按照默认的方式来搭建页面，而不是自造车轮。</strong
+        >
+      </section>
+    </main>
+  </body>
+</html>

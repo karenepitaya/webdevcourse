@@ -44,7 +44,8 @@ article {
       )
       no-repeat center,
     url(./assets/top-image.png) top no-repeat,
-    url(./assets/bottom-image.png) bottom no-repeat, rgb(100%, 100%, 100%);
+    url(./assets/bottom-image.png) bottom no-repeat, 
+    rgb(100%, 100%, 100%);
   border-top: 1mm solid #c90000;
   border-bottom: 1mm solid #c90000;
 }

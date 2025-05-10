@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../style/global-style.css" />
+    <link
+      rel="shortcut icon"
+      href="./../src/favicon96-layout-pages.png"
+      type="image/x-icon"
+    />
+    <title>Display Property</title>
+  </head>
+  <body>
+    <h1>Display 属性</h1>
+    <p>
+      在 <code>css</code>
+      中实现页面布局的主要方法是设定<code>display</code>属性的值。此属性允许我们更改默认的显示方式。正常流中的所有内容都有一个<code>display</code>的值，用作元素的默认行为方式。例如，英文段落显示在一个段落的下面，这是因为它们的样式是<code>display:block</code>。如果在段落中的某个文本周围创建链接，则该链接将与文本的其余部分保持内联，并且不会打断到新行。这是因为<code>&lt;a&gt;</code>元素默认为<code>display:inline</code>。
+    </p>
+    <p>
+      你可以更改此默认显示行为。例如，<code>&lt;li&gt;</code>元素默认为<code>display:block</code>，这意味着在我们的英文文档中，列表项显示为一个在另一个之下。如果我们将显示值更改为<code>inline</code>，它们现在将显示在彼此旁边，就像单词在句子中所做的那样。事实上，你可以更改任何元素的<code>display</code>值，这意味着你可以根据它们的语义选择
+      <code>html</code>元素，而不必关心它们的外观。他们的样子是你可以改变的。
+    </p>
+    <p>
+      除了可以通过将一些内容从<code>block</code>转换为<code>inline</code>（反之亦然）来更改默认表示形式之外，还有一些更大的布局方法以<code>display</code>值开始。但是，在使用这些属性时，通常需要调用其他属性。在讨论布局时，对我们来说最重要的两个值是
+      <code>display: flex</code>和<code>display: grid</code>。
+    </p>
+  </body>
+</html>

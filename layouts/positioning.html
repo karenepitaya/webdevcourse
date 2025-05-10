@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../style/list-complicated.css" />
+    <link rel="stylesheet" href="./../style/text-formating-intermediate.css" />
+    <title>Position</title>
+    <style>
+      body {
+        width: 90%;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 1em;
+        font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+        position: relative;
+      }
+
+      section p {
+        color: black;
+        background: aqua;
+        border: 3px solid blue;
+        padding: 10px;
+        margin: 10px;
+      }
+
+      section span {
+        background: red;
+        border: 1px solid black;
+      }
+
+      section img {
+        width: 1.2em;
+        height: auto;
+      }
+
+      .position {
+        background: yellow;
+      }
+
+      .static {
+        position: static;
+      }
+
+      .relative {
+        position: relative;
+        top: 30px;
+        left: 30px;
+      }
+
+      blockquote p {
+        all: initial;
+      }
+
+      .absolute {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 100px;
+      }
+      dt {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        position: sticky;
+        top: 0;
+        left: 0;
+        margin: 1em 0;
+      }
+
+      section {
+        background-color: #fff9c4; /* 柔和的黄色背景 */
+        color: #333; /* 深色文字，易于阅读 */
+        padding: 1em;
+        border-radius: 8px;
+        box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>定位</h2>
+      <p>
+        定位允许你从正常的文档流布局中取出元素，并使它们具有不同的行为，例如放在另一个元素的上面，或者始终保持在浏览器视窗内的同一位置。本文解释的是定位
+        (<code>position</code>) 的各种不同值，以及如何使用它们。
+      </p>
+      <h2>文档流</h2>
+      <p>
+        定位是一个相当复杂的话题，所以我们深入了解代码之前，让我们审视一下布局理论，并让我们了解它的工作原理。
+      </p>
+      <p>
+        首先，围绕元素内容添加任何内边距、边界和外边距来布置单个元素盒子——这就是盒模型
+        ，我们前面看过。默认情况下，块级元素的内容宽度是其父元素的宽度的
+        100％，并且与其内容一样高。内联元素高宽与他们的内容高宽一样。你不能对内联元素设置宽度或高度——它们只是位于块级元素的内容中。如果要以这种方式控制内联元素的大小，则需要将其设置为类似块级元素
+        <code>display</code>: <code>block</code>;。
+      </p>
+      <p>
+        这只是解释了单个元素，但是元素相互之间如何交互呢？正常的布局流（在布局介绍文章中提到）是将元素放置在浏览器视口内的系统。默认情况下，块级元素在视口中垂直布局——每个都将显示在上一个元素下面的新行上，并且它们的外边距将分隔开它们。
+      </p>
+      <p>
+        内联元素表现不一样——它们不会出现在新行上；相反，它们互相之间以及任何相邻（或被包裹）的文本内容位于同一行上，只要在父块级元素的宽度内有空间可以这样做。如果没有空间，那么溢流的文本或元素将向下移动到新行。
+      </p>
+      <p>
+        如果两个相邻元素都在其上设置外边距，并且两个外边距接触，则两个外边距中的较大者保留，较小的一个消失——这叫外边距折叠,
+        我们之前也遇到过。
+      </p>
+    </header>
+    <main>
+      <section>
+        <h1>Basic document flow</h1>
+
+        <p>
+          I am a basic block level element. My adjacent block level elements sit
+          on new lines below me.
+        </p>
+
+        <p>
+          By default we span 100% of the width of our parent element, and we are
+          as tall as our child content. Our total width and height is our
+          content + padding + border width/height.
+        </p>
+
+        <p>
+          We are separated by our margins. Because of margin collapsing, we are
+          separated by the width of one of our margins, not both.
+        </p>
+
+        <p>
+          inline elements <span>like this one</span> and
+          <span>this one</span> sit on the same line as one another, and
+          adjacent text nodes, if there is space on the same line. Overflowing
+          inline elements will
+          <span
+            >wrap onto a new line if possible (like this one containing
+            text)</span
+          >, or just go on to a new line if not, much like this image will do:
+          <img src="./../src/external-link-52.png" alt="external link 52px" />
+        </p>
+      </section>
+      <hr />
+      <section>
+        <blockquote>
+          <p>
+            定位的整个想法是允许我们覆盖上面描述的基本文档流行为，以产生有趣的效果。如果你想稍微改变布局中一些盒子的位置，使它们的默认布局流程位置稍微有点古怪，不舒服的感觉呢？定位是你的工具。或者，如果你想要创建一个浮动在页面其他部分顶部的
+            <code>UI</code>
+            元素，并且/或者始终停留在浏览器窗口内的相同位置，无论页面滚动多少？定位使这种布局工作成为可能。
+          </p>
+        </blockquote>
+        <blockquote>
+          <p>
+            静态定位是每个元素获取的默认值——它只是意味着“将元素放入它在文档布局流中的正常位置——这里没有什么特别的。
+          </p>
+        </blockquote>
+        <h1>Basic document flow: Static</h1>
+
+        <p>
+          I am a basic block level element. My adjacent block level elements sit
+          on new lines below me.
+        </p>
+
+        <p class="position static">
+          By default we span 100% of the width of our parent element, and we are
+          as tall as our child content. Our total width and height is our
+          content + padding + border width/height.
+        </p>
+
+        <p>
+          We are separated by our margins. Because of margin collapsing, we are
+          separated by the width of one of our margins, not both.
+        </p>
+
+        <p>
+          inline elements <span>like this one</span> and
+          <span>this one</span> sit on the same line as one another, and
+          adjacent text nodes, if there is space on the same line. Overflowing
+          inline elements will
+          <span
+            >wrap onto a new line if possible (like this one containing
+            text)</span
+          >, or just go on to a new line if not, much like this image will do:
+          <img src="./../src/external-link-52.png" alt="external link 52px" />
+        </p>
+        <blockquote>
+          <p>
+            相对定位是我们将要看的第一个位置类型。它与静态定位非常相似，占据在正常的文档流中，除了你仍然可以修改它的最终位置，包括让它与页面上的其他元素重叠。
+          </p>
+          <p>
+            再配合 <code>top</code>, <code>bottom</code>, <code>left</code>, 和
+            <code>right</code> 来精确指定要将定位元素移动到的位置。
+          </p>
+        </blockquote>
+        <h1>Basic document flow: Relative</h1>
+
+        <p>
+          I am a basic block level element. My adjacent block level elements sit
+          on new lines below me.
+        </p>
+
+        <p class="position relative">
+          By default we span 100% of the width of our parent element, and we are
+          as tall as our child content. Our total width and height is our
+          content + padding + border width/height.
+        </p>
+
+        <p>
+          We are separated by our margins. Because of margin collapsing, we are
+          separated by the width of one of our margins, not both.
+        </p>
+
+        <p>
+          inline elements <span>like this one</span> and
+          <span>this one</span> sit on the same line as one another, and
+          adjacent text nodes, if there is space on the same line. Overflowing
+          inline elements will
+          <span
+            >wrap onto a new line if possible (like this one containing
+            text)</span
+          >, or just go on to a new line if not, much like this image will do:
+          <img src="./../src/external-link-52.png" alt="external link 52px" />
+        </p>
+        <blockquote>
+          <p>绝对定位带来了非常不同的结果。</p>
+          <p>
+            首先，请注意，定位的元素应该在文档流中的间隙不再存在——第一和第三元素已经靠在一起，就像第二个元素不再存在！好吧，在某种程度上，这是真的。绝对定位的元素不再存在于正常文档布局流中。相反，它坐在它自己的层独立于一切。这是非常有用的：这意味着我们可以创建不干扰页面上其他元素的位置的隔离的
+            <code>UI</code>
+            功能。例如，弹出信息框和控制菜单；翻转面板；可以在页面上的任何地方拖放的
+            <code>UI</code> 功能……
+          </p>
+          <br /><br />
+          <p>
+            第二，注意元素的位置已经改变——这是因为top，<code>bottom</code>，<code>left</code>和<code>right</code>以不同的方式在绝对定位。它们指定元素应距离每个包含元素的边的距离，而不是指定元素应该移入的方向。所以在这种情况下，我们说的绝对定位元素应该位于从“包含元素”的顶部
+            30px，从左边 30px。
+          </p>
+        </blockquote>
+        <h1>Basic document flow: Absolute</h1>
+
+        <p>
+          I am a basic block level element. My adjacent block level elements sit
+          on new lines below me.
+        </p>
+
+        <p class="position absolute">
+          By default we span 100% of the width of our parent element, and we are
+          as tall as our child content. Our total width and height is our
+          content + padding + border width/height.
+        </p>
+
+        <p>
+          We are separated by our margins. Because of margin collapsing, we are
+          separated by the width of one of our margins, not both.
+        </p>
+
+        <p>
+          inline elements <span>like this one</span> and
+          <span>this one</span> sit on the same line as one another, and
+          adjacent text nodes, if there is space on the same line. Overflowing
+          inline elements will
+          <span
+            >wrap onto a new line if possible (like this one containing
+            text)</span
+          >, or just go on to a new line if not, much like this image will do:
+          <img src="./../src/external-link-52.png" alt="external link 52px" />
+        </p>
+      </section>
+      <section class="relative">
+        <h1>Basic document flow: Absolute</h1>
+
+        <p
+          class="absolute"
+          style="top: 10px; left: 10px; background-color: lightblue; z-index: 1"
+        >
+          I am a basic block level element. My adjacent block level elements sit
+          on new lines below me.
+        </p>
+
+        <p class="position absolute">
+          By default we span 100% of the width of our parent element, and we are
+          as tall as our child content. Our total width and height is our
+          content + padding + border width/height.
+        </p>
+
+        <p>
+          We are separated by our margins. Because of margin collapsing, we are
+          separated by the width of one of our margins, not both.
+        </p>
+
+        <p>
+          inline elements <span>like this one</span> and
+          <span>this one</span> sit on the same line as one another, and
+          adjacent text nodes, if there is space on the same line. Overflowing
+          inline elements will
+          <span
+            >wrap onto a new line if possible (like this one containing
+            text)</span
+          >, or just go on to a new line if not, much like this image will do:
+          <img src="./../src/external-link-52.png" alt="external link 52px" />
+        </p>
+        <blockquote>
+          <p>
+            网页也有一个
+            <code>z</code>
+            轴：一条从屏幕表面到你的脸（或者在屏幕前面你喜欢的任何其他东西）的虚线。<code
+              >z-index</code
+            >
+            值影响定位元素位于该轴上的位置；正值将它们移动到堆栈上方，负值将它们向下移动到堆栈中。默认情况下，定位的元素都具有
+            <code>z-index</code> 为 <code>auto</code>，实际上为
+            0，值越大越朝向你的脸，即越在顶层。
+          </p>
+        </blockquote>
+      </section>
+      <br />
+      <hr />
+      <section>
+        <h1 style="position: fixed; top: 0; width: 100%">
+          Basic document flow: Fixed
+        </h1>
+
+        <p>
+          I am a basic block level element. My adjacent block level elements sit
+          on new lines below me.
+        </p>
+
+        <p>
+          By default we span 100% of the width of our parent element, and we are
+          as tall as our child content. Our total width and height is our
+          content + padding + border width/height.
+        </p>
+
+        <p>
+          We are separated by our margins. Because of margin collapsing, we are
+          separated by the width of one of our margins, not both.
+        </p>
+
+        <p>
+          inline elements <span>like this one</span> and
+          <span>this one</span> sit on the same line as one another, and
+          adjacent text nodes, if there is space on the same line. Overflowing
+          inline elements will
+          <span
+            >wrap onto a new line if possible (like this one containing
+            text)</span
+          >, or just go on to a new line if not, much like this image will do:
+          <img src="./../src/external-link-52.png" alt="external link 52px" />
+        </p>
+      </section>
+      <hr />
+      <section style="height: 1400px">
+        <blockquote>
+          <p>
+            还有一个可用的位置值称为 <code>position</code>:
+            <code>sticky</code
+            >，比起其他位置值要新一些。它基本上是相对位置和固定位置的混合体，它允许被定位的元素表现得像相对定位一样，直到它滚动到某个阈值点（例如，从视口顶部起
+            10
+            像素）为止，此后它就变得固定了。例如，它可用于使导航栏随页面滚动直到特定点，然后粘贴在页面顶部。
+          </p>
+        </blockquote>
+        <h1>Basic document flow: Sticky</h1>
+
+        <p>
+          I am a basic block level element. My adjacent block level elements sit
+          on new lines below me.
+        </p>
+
+        <p class="position sticky">
+          By default we span 100% of the width of our parent element, and we are
+          as tall as our child content. Our total width and height is our
+          content + padding + border width/height.
+        </p>
+
+        <p>
+          We are separated by our margins. Because of margin collapsing, we are
+          separated by the width of one of our margins, not both.
+        </p>
+
+        <p>
+          inline elements <span>like this one</span> and
+          <span>this one</span> sit on the same line as one another, and
+          adjacent text nodes, if there is space on the same line. Overflowing
+          inline elements will
+          <span
+            >wrap onto a new line if possible (like this one containing
+            text)</span
+          >, or just go on to a new line if not, much like this image will do:
+          <img src="./../src/external-link-52.png" alt="external link 52px" />
+        </p>
+      </section>
+      <hr />
+      <section style="height: 1500px;">
+        <blockquote>
+          <p>
+            <code>position</code>:
+            <code>sticky</code>
+            的另一种有趣且常用的用法，是创建一个滚动索引页面。在此页面上，不同的标题会停留在页面顶部。这样的示例的标记可能如下所示：
+          </p>
+        </blockquote>
+        <h1>Sticky positioning</h1>
+
+        <dl>
+          <dt>A</dt>
+          <dd>Apple</dd>
+          <dd>Ant</dd>
+          <dd>Altimeter</dd>
+          <dd>Airplane</dd>
+          <dt>B</dt>
+          <dd>Bird</dd>
+          <dd>Buzzard</dd>
+          <dd>Bee</dd>
+          <dd>Banana</dd>
+          <dd>Beanstalk</dd>
+          <dt>C</dt>
+          <dd>Calculator</dd>
+          <dd>Cane</dd>
+          <dd>Camera</dd>
+          <dd>Camel</dd>
+          <dt>D</dt>
+          <dd>Duck</dd>
+          <dd>Dime</dd>
+          <dd>Dipstick</dd>
+          <dd>Drone</dd>
+          <dt>E</dt>
+          <dd>Egg</dd>
+          <dd>Elephant</dd>
+          <dd>Egret</dd>
+        </dl>
+      </section>
+    </main>
+  </body>
+</html>

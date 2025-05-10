@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../style/global-style.css" />
+    <link
+      rel="shortcut icon"
+      href="./../src/favicon96-layout-pages.png"
+      type="image/x-icon"
+    />
+    <title>CSS Layout</title>
+    <style>
+        h1 + img:hover {
+            transform: scale(1.01);
+            transition: transform 0.3s ease;  /* 此处待修正，见 style/pages/challenge/ */
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CSS Layout</h1>
+      <img
+        src="./../src/layout-avatar.jpg"
+        alt="Layout Avatar"
+        style="width: 96px; height: 96px; border-radius: 50%; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);"
+      />
+      <blockquote>
+        <p>
+          CSS
+          页面布局技术允许我们拾取网页中的元素，并且控制它们相对正常布局流、周边元素、父容器或者主视口/窗口的位置。在这个模块中将涉及更多关于页面布局技术的细节：
+        </p>
+        <nav>
+          <ul style="list-style: outside;">
+            <li><a href="./normal-flow.html" target="_blank" rel="noopener">正常布局流</a></li>
+            <li><a href="./display-property.html" target="_blank" rel="noopener">display 属性</a></li>
+            <li><a href="./flexbox.html" target="_blank" rel="noopener">弹性盒子</a></li>
+            <li><a href="./grid.html" target="_blank" rel="noopener">网格</a></li>
+            <li><a href="./float.html" target="_blank" rel="noopener">浮动</a></li>
+            <li><a href="./positioning.html" target="_blank" rel="noopener">定位</a></li>
+            <li><a href="./css-table-layout.html" target="_blank" rel="noopener">CSS 表格布局</a></li>
+            <li><a href="./multi-column-layout.html" target="_blank" rel="noopener">多列布局</a></li>
+          </ul>
+        </nav>
+        <p>
+          每种技术都有它们的用途，各有优缺点，相互辅助。通过理解各个布局方法的设计理念，你能够找到构建你想要的网页需要的布局方案。
+        </p>
+      </blockquote>
+    </header>
+
+  </body>
+</html>

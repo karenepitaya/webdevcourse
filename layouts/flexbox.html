@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../style/global-style.css" />
+    <link
+      rel="shortcut icon"
+      href="./../src/favicon96-layout-pages.png"
+      type="image/x-icon"
+    />
+    <title>Flex Box</title>
+    <style>
+      body {
+        width: 90%;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 1em;
+        font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>弹性盒子</h1>
+      <p>
+        长久以来，<code>CSS</code> 布局中唯一可靠且跨浏览器兼容的创建工具只有
+        <code>floats</code> 和
+        <code>positioning</code
+        >。这两个工具大部分情况下都很好使，但是在某些方面它们具有一定的局限性，让人难以完成任务。
+      </p>
+      <p>
+        以下简单的布局需求是难以或不可能用这样的工具（<code>floats</code> 和
+        <code>positioning</code>）方便且灵活的实现的：
+      </p>
+      <ul style="line-height: 1.5em; font-size: 1rem">
+        <li>在父内容里面垂直居中一个块内容。</li>
+        <li>
+          使容器的所有子项占用等量的可用宽度/高度，而不管有多少宽度/高度可用。
+        </li>
+        <li>使多列布局中的所有列采用相同的高度，即使它们包含的内容量不同。</li>
+        <li>
+          正如你将在后面的章节中看到的一样，弹性盒子使得很多布局任务变得更加容易。让我们继续吧！
+        </li>
+      </ul>
+    </header>
+    <main>
+      <section>
+        <h2>flex 模型说明</h2>
+        <img src="./../src/flex_terms.png" alt="flex 模型说明" />
+        <p>
+          主轴（<code>main</code> <code>axis</code>）是沿着
+          <code>flex</code>
+          元素放置的方向延伸的轴（比如页面上的横向的行、纵向的列）。该轴的开始和结束被称为
+          <code>main</code> <code>start</code> 和 <code>main</code>
+          <code>end</code>。
+        </p>
+        <p>
+          交叉轴（<code>cross</code> <code>axis</code>）是垂直于
+          <code>flex</code> 元素放置方向的轴。该轴的开始和结束被称为
+          <code>cross</code> <code>start</code> 和 <code>cross</code>
+          <code>end</code>。
+        </p>
+        <p>
+          设置了 <code>display</code>: <code>flex</code> 的父元素（在本例中是
+          <code>&lt;section&gt;</code>）被称之为 <code>flex</code> 容器（<code
+            >flex</code
+          >
+          <code>container</code>）。
+        </p>
+        <p>
+          在 <code>flex</code> 容器中表现为弹性的盒子的元素被称之为
+          <code>flex</code> 项（<code>flex</code> <code>item</code>）（本例中是
+          <code>&lt;article&gt;</code> 元素。
+        </p>
+      </section>
+      <section>
+        <h2>额外链接</h2>
+        <p>
+          <a
+            href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox"
+            target="_blank"
+            rel="noopener"
+            >MDN Flexbox</a
+          >、<a href="https://flexboxfroggy.com/" target="_blank" rel="noopener noreferrer">Flexbox Froggy</a>、<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="noopener noreferrer">CSS Flexbox Layout Guide</a></p>
+      </section>
+    </main>
+  </body>
+</html>
