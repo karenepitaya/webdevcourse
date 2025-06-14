@@ -1,5 +1,6 @@
 {
-  "dependencies": {
-    "eslint": "^9.28.0"
+  "devDependencies": {
+    "eslint": "^9.28.0",
+    "globals": "^16.2.0"
   }
 }
