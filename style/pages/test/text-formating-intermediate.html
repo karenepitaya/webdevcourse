@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>样式完整测试页面</title>
+  <link rel="stylesheet" href="./../../text-formating-intermediate.css" />
+</head>
+<body>
+
+  <header>
+    <h1>样式测试页面</h1>
+    <p>用于测试 CSS 样式文件的各类元素显示效果</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#section-typography">排版样式</a></li>
+      <li><a href="#section-quote">引用样式</a></li>
+      <li><a href="#section-image">图片</a></li>
+      <li><a href="#section-table">表格</a></li>
+      <li><a href="#section-code">代码</a></li>
+      <li><a href="#section-form">表单</a></li>
+      <li><a href="#section-dark">深色背景区域</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section id="section-typography">
+      <h2>排版样式</h2>
+      <h3>标题测试</h3>
+      <h4>H4 子标题</h4>
+      <h5>H5 子标题</h5>
+      <h6>H6 子标题</h6>
+
+      <p>这是一个段落，带有一些<strong>加粗</strong>、<em>斜体</em>与<code>行内代码</code>。</p>
+      <p><a href="https://example.com" target="_blank" rel="noopener">外部链接示例</a></p>
+
+      <ul>
+        <li>无序项 A</li>
+        <li>无序项 B</li>
+      </ul>
+
+      <ol>
+        <li>有序项 1</li>
+        <li>有序项 2</li>
+      </ol>
+    </section>
+
+    <section id="section-quote">
+      <h2>引用测试</h2>
+      <blockquote>
+        <p>第一层引用段落：</p>
+        <blockquote>
+          <p>第二层嵌套引用段落（测试嵌套 blockquote）</p>
+          <pre><code>let x = "嵌套代码";</code></pre>
+        </blockquote>
+        <p>引用结束。</p>
+      </blockquote>
+    </section>
+
+    <section id="section-image">
+      <h2>图片测试</h2>
+      <p>图片应自动适应宽度且带有圆角：</p>
+      <img src="https://via.placeholder.com/800x400?text=测试图片" alt="样例图片">
+    </section>
+
+    <section id="section-table">
+      <h2>表格测试</h2>
+      <table border="1" cellpadding="6" cellspacing="0">
+        <thead>
+          <tr>
+            <th>名称</th>
+            <th>年龄</th>
+            <th>职业</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>张三</td><td>30</td><td>工程师</td></tr>
+          <tr><td>李四</td><td>28</td><td>设计师</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="section-code">
+      <h2>代码块测试</h2>
+      <pre>
+function test() {
+  console.log("测试样式中的代码区块");
+}
+      </pre>
+    </section>
+
+    <section id="section-form">
+      <h2>表单测试</h2>
+      <form>
+        <label for="username">用户名：</label>
+        <input type="text" id="username" name="username" placeholder="输入用户名"><br><br>
+
+        <label for="password">密码：</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <label for="gender">性别：</label>
+        <input type="radio" id="male" name="gender" value="male"><label for="male">男</label>
+        <input type="radio" id="female" name="gender" value="female"><label for="female">女</label><br><br>
+
+        <label for="hobbies">爱好：</label>
+        <input type="checkbox" id="read" name="hobby" value="read"><label for="read">阅读</label>
+        <input type="checkbox" id="code" name="hobby" value="code"><label for="code">编程</label><br><br>
+
+        <label for="country">国家：</label>
+        <select id="country" name="country">
+          <option value="cn">中国</option>
+          <option value="jp">日本</option>
+          <option value="us">美国</option>
+        </select><br><br>
+
+        <button type="submit">提交</button>
+        <button type="reset">重置</button>
+      </form>
+    </section>
+
+    <section id="section-dark" style="background-color: #222; color: #eee; padding: 2em; border-radius: 8px;">
+      <h2>深色背景测试</h2>
+      <p>这个区域模拟深色模式下的容器，文字应保持良好可读性，排版不应被打乱。</p>
+      <ul>
+        <li>适当的行距</li>
+        <li>合理的边距</li>
+        <li>颜色对比合适</li>
+      </ul>
+      <blockquote>
+        <p>即使在深色背景中，blockquote 区块也应显示良好。</p>
+      </blockquote>
+    </section>
+
+  </main>
+
+  <aside>
+    <h3>侧边栏测试</h3>
+    <p>此区域可用于测试 `aside` 标签的样式布局。</p>
+  </aside>
+
+  <footer>
+    <p>&copy; 2025 样式测试页面 | <a href="#top">返回顶部</a></p>
+  </footer>
+
+</body>
+</html>
